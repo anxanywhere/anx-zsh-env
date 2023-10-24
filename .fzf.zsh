@@ -1,8 +1,5 @@
 # Setup fzf
 # ---------
-if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
-  export PATH="${PATH:+${PATH}:}/usr/local/opt/fzf/bin"
-fi
 
 export FZF_DEFAULT_OPTS="
 --layout=reverse
@@ -20,6 +17,6 @@ export FZF_DEFAULT_OPTS="
 "
 
 zvm_after_init() {
-    source "/usr/local/opt/fzf/shell/key-bindings.zsh"
-    source "/usr/local/opt/fzf/shell/completion.zsh" 
+    source ".fzf-keybindings.zsh"
+    source ".fzf-completion.zsh" 
 }

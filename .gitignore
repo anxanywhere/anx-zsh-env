@@ -1,0 +1,10 @@
+*
+
+!.gitignore
+!.zshrc
+!.p10k.zsh
+!.fzf.zsh
+!.oh-my-zsh
+!.vimrc
+!.screenrc
+!.fonts

@@ -1,3 +1,17 @@
+if [[ -d $HOME/.oh-my-zsh && -d $HOME/.oh-my-zsh_plugin_zsh-vi-mode && \
+    ! -L $HOME/.oh-my-zsh/custom/plugins/zsh-vi-mode ]]; then
+
+    echo "Enabling oh-my-zsh plugin zsh-vi-mode..."
+    ln -s $HOME/.oh-my-zsh_plugin_zsh-vi-mode $HOME/.oh-my-zsh/custom/plugins/zsh-vi-mode
+fi
+
+if [[ -d $HOME/.oh-my-zsh && -d $HOME/.oh-my-zsh_theme_powerlevel10k && \
+    ! -L $HOME/.oh-my-zsh/custom/themes/powerlevel10k ]]; then
+
+    echo "Enabling oh-my-zsh theme powerlevel10k..."
+    ln -s $HOME/.oh-my-zsh_theme_powerlevel10k $HOME/.oh-my-zsh/custom/themes/powerlevel10k
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.

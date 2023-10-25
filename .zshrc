@@ -140,10 +140,10 @@ fi
 IP=$(curl -s https://ipinfo.io/ip)
 
 if [[ ! -z "$IP" ]]; then
-    URL="https://api.geoiplookup.net/?query=$IP"
-    XML=$(curl -s $URL | xmllint --xpath "/ip/results/result" -)
-    COUNTRY=$(echo $XML | xmllint --xpath "/result/countrycode/text()" -)
-    CITY=$(echo $XML | xmllint --xpath "/result/city/text()" -)
+    URL="https://api.geoiplookup.net/?query=$IP&json=true"
+    JSON=$(curl -s $URL)
+    COUNTRY=$(echo $JSON | jq '.countrycode' | sed 's/"//g')
+    CITY=$(echo $JSON | jq '.city' | sed 's/"//g')
 fi
 
 if [[ ! -z "$COUNTRY" && ! -z "$CITY" ]]; then

@@ -1,0 +1,5 @@
+[user]
+        name = anxanywhere
+        email = anxanywhere@gmail.com
+[alias]
+    slog=log --graph --branches --decorate --oneline --all

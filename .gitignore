@@ -1,10 +1,12 @@
-*
+/*
 
-!.gitignore
-!.zshrc
-!.p10k.zsh
-!.fzf.zsh
-!.oh-my-zsh
-!.vimrc
-!.screenrc
-!.fonts
+!/.gitignore
+!/.gitmodules
+!/.zshrc
+!/.p10k.zsh
+!/.fzf.zsh
+!/.oh-my-zsh
+!/.vimrc
+!/.screenrc
+!/.fonts/
+!/.oh-my-zsh/

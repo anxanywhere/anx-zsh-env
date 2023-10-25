@@ -123,4 +123,6 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+git fetch
+
 cowsay $(fortune)

@@ -61,7 +61,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -136,6 +136,21 @@ fi
 [ -f ~/.p10k.zsh ] && source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+IP=$(curl -s https://ipinfo.io/ip)
+
+if [[ ! -z "$IP" ]]; then
+    URL="https://api.geoiplookup.net/?query=$IP"
+    XML=$(curl -s $URL | xmllint --xpath "/ip/results/result" -)
+    COUNTRY=$(echo $XML | xmllint --xpath "/result/countrycode/text()" -)
+    CITY=$(echo $XML | xmllint --xpath "/result/city/text()" -)
+fi
+
+if [[ ! -z "$COUNTRY" && ! -z "$CITY" ]]; then
+    echo -n -e "\033]0;"$CITY, $COUNTRY"\007\c"
+else
+    echo -n -e "\033]0;"Somewhere, world"\007\c"
+fi
 
 git fetch
 

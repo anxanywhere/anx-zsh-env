@@ -1,9 +1,3 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
-[submodule ".oh-my-zsh_plugin_zsh-vi-mode"]
-	path = .oh-my-zsh_plugin_zsh-vi-mode
-	url = https://github.com/jeffreytse/zsh-vi-mode
-[submodule ".oh-my-zsh_theme_powerlevel10k"]
-	path = .oh-my-zsh_theme_powerlevel10k
-	url = https://github.com/romkatv/powerlevel10k.git

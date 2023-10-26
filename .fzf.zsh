@@ -16,7 +16,5 @@ export FZF_DEFAULT_OPTS="
 --bind 'ctrl-v:execute(code {+})'
 "
 
-zvm_after_init() {
-    source ".fzf-keybindings.zsh"
-    source ".fzf-completion.zsh" 
-}
+[[ -f .fzf-keybindings.zsh ]] && source ".fzf-keybindings.zsh"
+[[ -f .fzf-completion.zsh ]] && source ".fzf-completion.zsh" 

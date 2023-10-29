@@ -1,13 +1,12 @@
 /*
-
 !/.gitconfig
 !/.gitignore
 !/.gitmodules
 !/.zshrc
-!/.p10k.zsh
 !/.fzf.zsh
 !/.oh-my-zsh
 !/.vimrc
 !/.screenrc
 !/.fonts/
+/.fonts/.uuid
 !/.oh-my-zsh/

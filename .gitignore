@@ -9,4 +9,10 @@
 !/.screenrc
 !/.fonts/
 /.fonts/.uuid
+!/.ssh/
+/.ssh/*
+!/.ssh/id_rsa.pub
+!/.ssh/id_ecdsa.pub
+!/.ssh/id_ed25519.pub
+!/.ssh/authorized_keys
 !/.oh-my-zsh/

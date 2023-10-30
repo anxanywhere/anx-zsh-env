@@ -126,6 +126,8 @@ else
     echo -n -e "\033]0;"Somewhere, world"\007\c"
 fi
 
+umask 077
+
 git fetch
 
 cowsay $(fortune)

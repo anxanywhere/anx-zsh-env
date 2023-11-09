@@ -1,5 +1,9 @@
 [[ -f .zshrc.local ]] && source .zshrc.local
 
+export PYENV_ROOT=$HOME/.pyenv
+command -v pyenv >/dev/null || export PATH=$PYENV_ROOT/bin:$PATH
+command -v pyenv >/dev/null && eval "$(pyenv init -)"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -72,7 +76,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vi-mode git)
+plugins=(vi-mode git pyenv)
 
 source $ZSH/oh-my-zsh.sh
 

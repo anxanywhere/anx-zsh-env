@@ -9,6 +9,10 @@
 !/.screenrc
 !/.fonts/
 /.fonts/.uuid
+/.fonts/encodings.dir
+/.fonts/fonts.dir
+/.fonts/fonts.list
+/.fonts/fonts.scale
 !/.ssh/
 /.ssh/*
 !/.ssh/id_rsa.pub

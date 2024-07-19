@@ -13,7 +13,10 @@ set hidden
 set hlsearch
 
 if has('gui_running')
-    set guifont=MesloLGS-NF-Regular:h12
+    set guifont=MesloLGS\ NF\ Regular\ 11
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
     colorscheme desert
 endif
 

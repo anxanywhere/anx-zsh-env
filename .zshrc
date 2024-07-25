@@ -119,13 +119,6 @@ IP=$(curl -s https://ipinfo.io/ip)
 R=$(curl -s https://ipinfo.io/region)
 C=$(curl -s https://ipinfo.io/country)
 
-if [[ ! -z "$IP" ]]; then
-    URL="https://api.geoiplookup.net/?query=$IP&json=true"
-    JSON=$(curl -s $URL)
-    COUNTRY=$(echo $JSON | jq '.countrycode' | sed 's/"//g')
-    CITY=$(echo $JSON | jq '.city' | sed 's/"//g')
-fi
-
 if [[ ! -z "$R" && ! -z "$C" ]]; then
     echo -n -e "\033]0;"$R, $C"\007\c"
 else

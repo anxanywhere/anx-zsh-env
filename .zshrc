@@ -115,6 +115,8 @@ alias cat="bat"
 
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 
+[[ -f ~/.pet.zsh ]] && source ~/.pet.zsh
+
 IP=$(curl -s https://ipinfo.io/ip)
 R=$(curl -s https://ipinfo.io/region)
 C=$(curl -s https://ipinfo.io/country)

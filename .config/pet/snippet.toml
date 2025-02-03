@@ -1,0 +1,24 @@
+
+[[Snippets]]
+  Description = "Say hello to the world."
+  Output = ""
+  Tag = ["print", "hello"]
+  command = "echo \"Hello, world!\""
+
+[[Snippets]]
+  Description = "Show web server ssl certificate expiration date"
+  Output = ""
+  Tag = ["print", "ssl", "certificate", "expiration date"]
+  command = "echo | openssl s_client -connect <Web Server>:443 2>/dev/null | openssl x509 -dates -noout"
+
+[[Snippets]]
+  Description = "Show web server ssl certificate chain"
+  Output = ""
+  Tag = ["print", "ssl", "certificate", "chain"]
+  command = "echo | openssl s_client -showcerts -connect <Web Server>:443 | grep depth"
+
+[[Snippets]]
+  Description = "print ssl certificate serial number"
+  Output = ""
+  Tag = ["print", "ssl", "certificate", "serial"]
+  command = "echo | openssl s_client -connect <Web Server>:443 2>/dev/null | openssl x509 -serial -noout | sed 's/.*=//g;s/../&:/g;s/:$//'"

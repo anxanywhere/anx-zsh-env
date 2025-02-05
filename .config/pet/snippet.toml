@@ -22,3 +22,39 @@
   Output = ""
   Tag = ["print", "ssl", "certificate", "serial"]
   command = "echo | openssl s_client -connect <Web Server>:443 2>/dev/null | openssl x509 -serial -noout | sed 's/.*=//g;s/../&:/g;s/:$//'"
+
+[[Snippets]]
+  Description = "Synopsys LDAP list user accounts"
+  Output = ""
+  Tag = ["snps", "ldap", "list", "user accounts"]
+  command = "ldapsearch -xLLLZZh ldap.synopsys.com -b \"ou=people,ou=users,dc=global,dc=synopsys,dc=com\" dn"
+
+[[Snippets]]
+  Description = "Synopsys LDAP user account details"
+  Output = ""
+  Tag = ["snps", "ldap", "details", "user account"]
+  command = "ldapsearch -xLLLZZh ldap.synopsys.com -b \"ou=people,ou=users,dc=global,dc=synopsys,dc=com\" uid=<User Account>"
+
+[[Snippets]]
+  Description = "Synopsys LDAP list special accounts"
+  Output = ""
+  Tag = ["snps", "ldap", "list", "special accounts"]
+  command = "ldapsearch -xLLLZZh ldap.synopsys.com -b \"ou=special_users,ou=users,dc=global,dc=synopsys,dc=com\" dn"
+
+[[Snippets]]
+  Description = "Synopsys LDAP special account details"
+  Output = ""
+  Tag = ["snps", "ldap", "details", "special account"]
+  command = "ldapsearch -xLLLZZh ldap.synopsys.com -b \"ou=special_users,ou=users,dc=global,dc=synopsys,dc=com\" uid=<Special Account>"
+
+[[Snippets]]
+  Description = "Synopsys LDAP list groups"
+  Output = ""
+  Tag = ["snps", "ldap", "list", "groups"]
+  command = "ldapsearch -xLLLZZh ldap.synopsys.com -b \"ou=group,dc=global,dc=synopsys,dc=com\" dn"
+
+[[Snippets]]
+  Description = "Synopsys LDAP group details"
+  Output = ""
+  Tag = ["snps", "ldap", "details", "group"]
+  command = "ldapsearch -xLLLZZh ldap.synopsys.com -b \"ou=group,dc=global,dc=synopsys,dc=com\" cn=<Group>"

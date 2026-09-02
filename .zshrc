@@ -117,9 +117,9 @@ alias cat="bat"
 
 [[ -f ~/.pet.zsh ]] && source ~/.pet.zsh
 
-IP=$(curl -s https://ipinfo.io/ip)
-R=$(curl -s https://ipinfo.io/region)
-C=$(curl -s https://ipinfo.io/country)
+#IP=$(curl -s https://ipinfo.io/ip)
+R=$(curl --silent --connect-timeout 1 https://ipinfo.io/region)
+C=$(curl --silent --connect-timeout 1 https://ipinfo.io/country)
 
 if [[ ! -z "$R" && ! -z "$C" ]]; then
     echo -n -e "\033]0;"$R, $C"\007\c"

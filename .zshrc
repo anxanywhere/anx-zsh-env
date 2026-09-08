@@ -129,7 +129,7 @@ fi
 
 umask 077
 
-git fetch
+timeout 3s git fetch
 
 if command -v cowsay &> /dev/null && command -v fortune &> /dev/null; then
     cowsay $(fortune)
